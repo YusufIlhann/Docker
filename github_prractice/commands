@@ -1,0 +1,15 @@
+sudo docker image rm 4e5021d210f6   - delete the image
+docker images - shows the images
+docker run -i ubuntu:latest bash
+docker run -t ubuntu:latest bash
+## When you combine -i and -t, you get a proper terminal like experience
+ run : Run a command in a new container
+# -i : interactively
+# -t : attached to your terminal
+# ubuntu : image we will be downloading
+# /bin/bash : the command that will run inside the container started with ubuntu image
+docker run -i -t ubuntu /bin/bash
+
+
+docker ps          # To show all running containers
+docker ps -a       # To show all containers including stopped ones
