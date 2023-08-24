@@ -64,4 +64,43 @@ docker compose takes care of creating a common network. we dont need to spesify 
 docker-copmesu otomatik yukler docker i yuklerken
 
 # video 10
-https://www.youtube.com/watch?v=WmcdMiyqfZs&list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs&index=10
+## creating an image from our app
+Dockerfile - it is a blueprint for building the image.
+FROM node --install node
+ENV - external olarak yapmak daha mantikli
+RUN mkdir -p /home/app
+COPY  ./home/app
+CMD ["node", "server.js"]
+
+### guzel bir alistirma yapti tekrar izlenebilir
+
+## video 11
+genel repositorye atmayi gosterdi. teorik bir video. iyi degildi.
+
+# video 12
+## docker volume
+it is used for data persistence. without a volume, all the data gone when delete the container.
+3 tur var
+docker run -v   host makinada bir direktori belirlersin- host  file sistemi 1 tanesi
+2. si docker belirledi bir tanesi spesifik bir yer anynimiy  volume
+3. isae named volumes ---
+
+# video 13
+gneel olara teorik video verdi
+
+# video 14
+docker volume in practice
+
+# video 15
+docker versus kubernetes
+
+# video 16
+8 best practices
+1. use official base image
+2. latest version may be not good
+3. use smaller image
+4. use .dockerignore file
+5. use  least privilage
+6. scan your images for vulnerabilities
+
+
