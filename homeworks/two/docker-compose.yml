@@ -2,12 +2,12 @@ version: "3.8"
 services:
   css:
     build:
-      context: /Users/yusuf/Desktop/Mathias/Docker/homeworks/two/Dockerfile
-      #dockerfile: /Users/yusuf/Desktop/Mathias/Docker/homeworks/two/Dockerfile
-    restart: on-failure
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
     ports:
-      - "4000:4000"
+      - "80:80"
 
 
-
-#build: context  ????
+# volume  ile  kalici olur
+volume olamdan silinir.
