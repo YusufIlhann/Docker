@@ -21,4 +21,11 @@ docker run -d -p 81:81 --name yusuff -v test1:/usr/share/nginx/html  -v test1:/v
 
 docker  volume  create --opt type=nfs 0=addr=192.168.1.2,  rw,nfsserver4  --opt device=:/home/nfsshare nfs-volume
 
+
+## network
+ayni ag uzerinde containerlar  birbirleri  ile haberlesirler.
+coklu netwrok  trafigini  bolumlere  ayrilmasi saglar.
+contaienrlar  birden fazla netwroke bagli olurlar.
+
+
 https://www.btkakademi.gov.tr/portal/course/player/deliver/docker-temelleri-21907
