@@ -26,6 +26,40 @@ docker  volume  create --opt type=nfs 0=addr=192.168.1.2,  rw,nfsserver4  --opt 
 ayni ag uzerinde containerlar  birbirleri  ile haberlesirler.
 coklu netwrok  trafigini  bolumlere  ayrilmasi saglar.
 contaienrlar  birden fazla netwroke bagli olurlar.
+docker netwrok ls - netwrokwlri  gorulur
+docker netwrok bridge -- bridge netwrok hakkinda ayrintili bilgili
+docker netwrok host  - host netwrok taypi  hakkinda bilgiverir
 
+docker run centos  /usr/sbin/ip route    --ip   adresi ile  ilgili bilgielr veiri
+docker netwrok create network_name
+docker netwrok  ls
+docker netwrok test isnpect- olusrturulan netwrok hakkinda  bilgi verir
+container e atamak container run  -it --net testnetwrok centos  bash .. .bu testnetwrok networkune olustuurr
+
+silmek
+docker  netwrok   rm  netwrok_name
+docker netwrok inspect test_network hangileri bagli  gorebilriz.  kullaniyorsa silemeyiz.
+docker netwrok prune.  kullanilmayan  butun netwrokwlri siler
+
+
+## docker compose
+docker compose --version
+docker compose build -- servisleri build eder.
+docker compose up ---direk build eder.
+
+# docker compose yaml file
+version: 3.0
+services:
+    nginx-service:
+        build: Website
+        depends_on:
+        - ruby-service
+
+    ruby-service:
+        build: WebApp
+        depends_on:
+        - redis-service
+    redis-service:
+        image: redis
 
 https://www.btkakademi.gov.tr/portal/course/player/deliver/docker-temelleri-21907

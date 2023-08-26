@@ -1,0 +1,18 @@
+version: "3.0"
+services:
+    # nginx-service:
+    #     build: ./Website
+    #     depends_on:
+    #     - ruby-service
+
+    # ruby-service:
+    #     build: ./WebApp
+    #     depends_on:
+    #     - redis-service
+    # redis-service:
+    #     image: redis
+  webapp:
+    build:
+      context:  .
+      dockerfile: Dockerfile
+    image: webapp:v1
