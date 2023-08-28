@@ -64,7 +64,7 @@ services:
 
 
 
-docker-compose up
+docker swarm
 
 
 https://www.btkakademi.gov.tr/portal/course/player/deliver/docker-temelleri-21907
