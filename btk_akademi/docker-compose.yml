@@ -16,3 +16,17 @@ services:
       context:  .
       dockerfile: Dockerfile
     image: webapp:v1
+
+
+version: "3"
+secvices:
+  elasticsearch:
+  image: ubuntu
+  environment:
+    - discovery.type=single-node
+  ports:
+    - 9200:9200
+  kibana:
+  image: docker....
+  ports:
+    - 2400:2400

@@ -62,4 +62,9 @@ services:
     redis-service:
         image: redis
 
+
+
+docker-compose up
+
+
 https://www.btkakademi.gov.tr/portal/course/player/deliver/docker-temelleri-21907
